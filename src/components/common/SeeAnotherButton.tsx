@@ -20,7 +20,7 @@ export const SeeAnotherButton = () => {
         store.dispatch(fetchAnotherCatOfTheBreed(anotherCatOfTheBreedRequest));
       }}
     >
-      See random
+      See a
     </button>
   );
 };
