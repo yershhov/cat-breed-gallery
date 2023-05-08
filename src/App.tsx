@@ -33,10 +33,10 @@ const App = () => {
 
   return (
     <div
-      className="h-screen w-full bg-gray-200 font-noto font-normal
+      className="relative h-screen w-full bg-gray-200 font-noto font-normal
                text-darkBlue md:grid md:place-items-center"
     >
-      <div className="relative flex items-center gap-4">
+      <div className="flex items-center gap-4">
         {!isMobile && <CustomChevron type={"prev"} />}
 
         <div className="flex h-[80%] w-full flex-col gap-4 md:h-[40rem] md:w-[40rem]">
@@ -50,7 +50,7 @@ const App = () => {
             >
               {breeds!.map((item, index) => {
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={uuid()}>
                     <BreedSwiperSlide index={index} />
                   </SwiperSlide>
                 );
