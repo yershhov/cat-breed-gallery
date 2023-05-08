@@ -1,16 +1,12 @@
+import { useEffect } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { SeeAnotherButton } from "./components/common/SeeAnotherButton";
 import { SlideImageLoading } from "./components/loading/SlideImageLoading";
-import { fetchAnotherCatOfTheBreed } from "./redux/cats.slice";
-import { useAppDispatch, useAppSelector } from "./store";
+import { useAppSelector } from "./store";
 
 export const BreedSlide = (props: { index: number }) => {
-  const dispatch = useAppDispatch();
-  const currentSlideIndex = useAppSelector(
-    (state) => state.swiper.currentSlideIndex
-  );
-
   const breeds = useAppSelector((state) => state.cats.breeds);
+  const breedsState = useAppSelector((state) => state.cats.breedsState);
 
   const [cats, catsState] = [
     useAppSelector((state) => state.cats.cats),

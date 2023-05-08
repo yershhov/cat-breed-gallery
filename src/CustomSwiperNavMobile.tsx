@@ -8,7 +8,7 @@ export const CustomSwiperNavMobile = () => {
   return (
     <>
       {breedsState === "fulfilled" && (
-        <div className="absolute bottom-0 z-50 flex w-full items-center justify-center gap-4 p-4 pb-12">
+        <div className="absolute bottom-0 z-50 flex w-full items-center justify-center gap-4 pb-12">
           <CustomChevron type={"prev"} />
           <SeeAnotherButton />
           <CustomChevron type={"next"} />
